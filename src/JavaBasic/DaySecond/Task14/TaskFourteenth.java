@@ -1,7 +1,13 @@
 package JavaBasic.DaySecond.Task14;
 
 import java.util.Arrays;
-
+/*
+    Napisz program, którydla zadanej tablicy int'ówpoliczy ile jest w niej liczb ujemnych. Jeślitakie
+    występująutworzy nowątablicę,do którejprzepisze tylko te ujemne liczby.
+    Przykład:
+    Input: 12, -7, 19, -5
+    Result: -7, -5
+*/
 public class TaskFourteenth {
 
     public static void main(String[] args) {
