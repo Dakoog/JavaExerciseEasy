@@ -31,8 +31,8 @@ public class TaskFirst {/*
         //domek length: 5 domek.charAt(4) -> k
         // null -> false && się nie wykona ponieważ nie ma sensu sprawdzać drugiego warunku gdy pierwszy to false -> false
         // "" -> true && false -> false
-        if(input != null && !input.isBlank()) {
-            int lastPosition = input.length() - 1;
+        if(StringHelper.isValid(input)) {
+            int lastPosition= input.length()-1;
             return input.charAt(lastPosition);
         }
         return DEFAULT_CHAR;
