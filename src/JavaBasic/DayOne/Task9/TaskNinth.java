@@ -1,4 +1,4 @@
-package JavaBasic.DayOne;
+package JavaBasic.DayOne.Task9;
 
 public class TaskNinth {
     public static void main(String[] args) {

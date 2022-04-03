@@ -1,6 +1,4 @@
-package JavaBasic.DayOne;
-
-import com.sun.jdi.FloatValue;
+package JavaBasic.DaySecond.Task7;
 
 import java.util.Scanner;
     /*

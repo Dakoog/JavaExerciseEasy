@@ -1,4 +1,4 @@
-package JavaBasic.DayOne;
+package JavaBasic.DayOne.Task5;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package JavaBasic.DayOne;
+package JavaBasic.DayOne.Task8;
 
 public class TaskEight {
     public static void main(String[] args) {

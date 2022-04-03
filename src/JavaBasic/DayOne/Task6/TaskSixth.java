@@ -1,4 +1,4 @@
-package JavaBasic.DayOne;
+package JavaBasic.DayOne.Task6;
 
 import java.util.Scanner;
 /*Napisz program, który wypisze poniższy kawałek tabliczki mnożenia np:
