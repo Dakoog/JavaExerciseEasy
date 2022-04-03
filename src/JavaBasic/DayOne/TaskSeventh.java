@@ -51,37 +51,38 @@ public class TaskSeventh {
 
 
     private static float calculate(float firstDigit, float secondDigit, String operator) {
+        float result=0;
         switch (operator) {
             case "+" -> {
                 System.out.println(firstDigit + " + " + secondDigit);
-                return firstDigit + secondDigit;
+                result= firstDigit + secondDigit;
             }
             case "-" -> {
                 System.out.println(firstDigit + " - " + secondDigit);
-                return firstDigit - secondDigit;
+               result = firstDigit - secondDigit;
             }
             case "*" -> {
                 System.out.println(firstDigit + " * " + secondDigit);
-                return firstDigit * secondDigit;
+                result= firstDigit * secondDigit;
             }
             case "/" -> {
                 System.out.println(firstDigit + " : " + secondDigit);
 
                 if (secondDigit == 0) {
                     System.out.println("Wrong operation");
-                } else
 
-                    return firstDigit / secondDigit;
+                } else
+                    result= firstDigit / secondDigit;
             }
             case "pwr" -> {
                 System.out.println(firstDigit + " ^ " + secondDigit);
                 if (secondDigit <= 0) {
                     System.out.println("Wrong operation");
                 }
-                return (float) Math.pow(firstDigit, secondDigit);
+                result = (float) Math.pow(firstDigit, secondDigit);
             }
             default -> System.out.println("Operator not exist");
         }
-        return Float.parseFloat(operator);
+        return result;
     }
 }
