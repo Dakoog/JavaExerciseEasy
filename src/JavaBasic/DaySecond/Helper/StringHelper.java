@@ -1,4 +1,4 @@
-package JavaBasic.DaySecond.Task1;
+package JavaBasic.DaySecond.Helper;
 
 public class StringHelper {
     public static boolean isValid(String input){

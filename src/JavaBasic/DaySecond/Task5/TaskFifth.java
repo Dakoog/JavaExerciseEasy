@@ -1,6 +1,6 @@
-package JavaBasic.DaySecond;
+package JavaBasic.DaySecond.Task5;
 
-import JavaBasic.DaySecond.Task1.StringHelper;
+import JavaBasic.DaySecond.Helper.StringHelper;
 
 /*Napisz program, któryprzyjmie jako argument input (typu String) i znak (typu char), a następnie
 zwróciliczbęwystąpieńpodanego znaku w danym łańcuchu znaków.

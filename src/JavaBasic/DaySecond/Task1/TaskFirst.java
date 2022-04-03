@@ -1,5 +1,7 @@
 package JavaBasic.DaySecond.Task1;
 
+import JavaBasic.DaySecond.Helper.StringHelper;
+
 public class TaskFirst {/*
     Napisz program, który przyjmie jako parametr tekst (typu String), a następnie zwróci jego
     ostatni znak.

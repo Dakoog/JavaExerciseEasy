@@ -1,6 +1,6 @@
-package JavaBasic.DaySecond;
+package JavaBasic.DaySecond.Task3;
 
-import JavaBasic.DaySecond.Task1.StringHelper;
+import JavaBasic.DaySecond.Helper.StringHelper;
 
 public class TaskThird {
 

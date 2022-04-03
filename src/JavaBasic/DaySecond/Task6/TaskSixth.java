@@ -1,6 +1,6 @@
 package JavaBasic.DaySecond.Task6;
 
-import JavaBasic.DaySecond.Task1.StringHelper;
+import JavaBasic.DaySecond.Helper.StringHelper;
 
 /*
     Napisz program, który przyjmie jako argument input (typu String) i znak (typu char), a następnie
