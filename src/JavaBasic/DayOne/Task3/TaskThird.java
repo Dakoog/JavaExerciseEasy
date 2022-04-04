@@ -7,7 +7,7 @@ public class TaskThird {
     private static final Scanner INPUT = new Scanner(System.in);
 
     /*
-            Napisz program, który pobierze od użytkownika dwie zmienne x i y (typu int).
+            Zapisz program, który pobierze od użytkownika dwie zmienne x i y (typu int).
             Następnie, za pomocą operatorów logicznych i matematycznych wyświetli wynik następujących zapytań:
             a) Czy x jest większe od y?
             b) Czy x pomnożone przez 3 jest większe od y?
