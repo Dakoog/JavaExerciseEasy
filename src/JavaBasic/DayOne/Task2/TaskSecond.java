@@ -3,33 +3,34 @@ package JavaBasic.DayOne.Task2;
 import java.util.Scanner;
 
 public class TaskSecond {
+      // przypisanie stałej wartości finalnej (niezmiennej)
+    private static final float PI = 3.14f;
+
     /*
-    Napisz program, którypobierze od użytkownikaśrednicęokręgu(typu float), a następnieobliczy
-    obwódoraz pole tego okręgu. Do obliczeńprzyjmij:
-    a) π= 3,14;
-    b) wartośćstałejπz klasy Math.
-    Przykład:
-    Please insert diameter: 2,5
-    Circumference Of A Circle: 7.8500004
-    Area Of A Circle: 4.90625
-     */
-    private static final float pi = 3.14F;
+            Napisz program, który pobierze od użytkownika średnicę okręgu(typu float), a następnie obliczy
+            obwód oraz pole tego okręgu. Do obliczeń przyjmij:
+            a) π = 3,14;
+            b) wartość stałej π z klasy Math.
+            Przykład:
+            Please insert diameter: 2,5
+            Circumference Of A Circle: 7.8500004
+            Area Of A Circle: 4.90625
+             */
+
 
     public static void main(String[] args) {
-
+      // przypisanie zmiennej diameter wartości średnicy podanej przez użytkownika (Scanner)
         float diameter = getDiameterFromUser();
 
-        double area1 = calculateAreaOFaCircle(diameter);
-        double circumference1 = calculateCircumferenceOFaCircle(diameter);
-
-        double area2 = calculateAreaOFaCircleWithMath(diameter);
-        double circumference2 = calculateCircumferenceOFaCircleWithMath(diameter);
-
+        double area1 = calculateAreaOfCircle(diameter);
+        double circumference1 = calculatePerimeterOfCircle(diameter);
         System.out.println("Dla Pi = 3.14");
         System.out.println("Circumference of a circle: " + circumference1);
         System.out.println("Area of a circle: " + area1);
 
-        System.out.println("\nZ klasą Math dla Pi =  3.14159265358979323846");
+        double area2 = calculateAreaOfCircleWithMath(diameter);
+        double circumference2 = calculatePerimeterOfCircleWithMath(diameter);
+        System.out.println("\nZ klasą Math dla pi =  3.14159265358979323846");
         System.out.println("Circumference of a circle: " + circumference2);
         System.out.println("Area of a circle: " + area2);
 
@@ -44,19 +45,23 @@ public class TaskSecond {
         return input.nextFloat();
     }
 
-    private static double calculateCircumferenceOFaCircle(float diameter) {
-        return pi * diameter;
+    private static float calculatePerimeterOfCircle(float diameter) {
+        return 3.14f * diameter;
     }
 
-    private static double calculateAreaOFaCircle(float diameter) {
-        return pi * diameter * diameter / 4f;
+    private static float calculateAreaOfCircle(float diameter) {
+
+               // przypisanie stałej finalnej do wartości PI = 3.14 -> ctrl + alt + c
+        return PI * (float)Math.pow(diameter,2)/ 4f;
     }
 
-    private static double calculateCircumferenceOFaCircleWithMath(float diameter) {
+    private static double calculatePerimeterOfCircleWithMath(float diameter) {
         return Math.PI * diameter;
     }
 
-    private static double calculateAreaOFaCircleWithMath(float diameter) {
-        return Math.PI * Math.pow(diameter, 2) / 4f;
+    private static float calculateAreaOfCircleWithMath(float diameter) {
+        // return zwraca wartości typu float -> obie muszą być są a przed rzutowaniem są typu double
+        return (float) Math.PI * (float)Math.pow(diameter,2)/ 4f;
+                      // zastosowanie wartości liczby Pi z Metod Math PI = 3.141592653589793.
     }
 }
