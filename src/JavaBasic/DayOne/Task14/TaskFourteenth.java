@@ -25,8 +25,7 @@ public class TaskFourteenth {
     private static final double HiGH_INTEREST_RATE = 1.1;
     private static final double AVERAGE_INTEREST_RATE = 1.05;
     private static final Scanner INPUT = new Scanner(System.in);
-    private double cash;
-    private int installments;
+  
 
 
     public static void main(String[] args) {
