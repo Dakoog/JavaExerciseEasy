@@ -23,32 +23,23 @@ public class TaskTwelve {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Please insert twice numbers a and b when a >= b ");
-        int firstNumber;
-        int secondNumber;
 
-        do {
-            System.out.println("Remember a >= b!");
-            firstNumber = input.nextInt();
-            secondNumber = input.nextInt();
-        }
-        while (firstNumber < secondNumber);
+        int firstNumber = input.nextInt();
+        int secondNumber = input.nextInt();
+
 
         int modulo = ownMethodForCalculateModuloTwiceNumbers(firstNumber, secondNumber);
         System.out.println("The remainder of dividing " + firstNumber + " by " + secondNumber + " is " + modulo);
-        
+
         boolean check = ifOwnModuloImplementationIsCorrect(firstNumber, secondNumber);
         System.out.println(check);
+
     }
 
 
     private static int ownMethodForCalculateModuloTwiceNumbers(int a, int b) {
-        int modulo = 0;
-        if (a >= b) {
-            modulo = a - (a / b) * b;
-        } else {
-            System.out.println("You insert wrong number ");
-        }
-        return modulo;
+
+        return a - (a / b) * b;
     }
 
     private static boolean ifOwnModuloImplementationIsCorrect(int a, int b) {
