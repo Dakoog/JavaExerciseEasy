@@ -22,7 +22,7 @@ public class TaskTwelve {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please insert twice numbers a and b when a >= b ");
+        System.out.println("Please insert twice numbers a and b");
 
         int firstNumber = input.nextInt();
         int secondNumber = input.nextInt();
