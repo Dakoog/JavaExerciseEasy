@@ -12,23 +12,23 @@ public class TaskEleventh {
 
 
     /*
-                    Napisz program, który będzie grał z użytkownikiem w „za dużo, za mało”
-                    a) W pierwszym kroku komputer losuje liczbę z zakresu od 0 d 100 skorzystaj z metody
-                    Random.nextInt
-                    b) Następnie czeka na podanie liczby przez użytkownika.
-                    c) Jeśli użytkownik poda liczbę większą, niż wylosowana przez komputer, program powinien
-                    wypisać too much” i czekać na podanie kolejnej liczby.
-                    Jeśli użytkownik poda liczbę mniejszą, program powinien wypisać „not enough i analogicznie czekać na następną liczbę.
-                    Jeśli podana wartość jest tą szukaną, to program powinien wypisać słowo BINGO i zakończyć się
-                    Example:
-                    Please insert digit:
-                    5
-                    Not enough
-                    Please insert digit
-                    15
-                    Too much
-                    Please insert digit 10
-                    Bingo!
+        Napisz program, który będzie grał z użytkownikiem w „za dużo, za mało”
+            a) W pierwszym kroku komputer losuje liczbę z zakresu od 0 d 100 skorzystaj z metody
+            Random.nextInt
+            b) Następnie czeka na podanie liczby przez użytkownika.
+            c) Jeśli użytkownik poda liczbę większą, niż wylosowana przez komputer, program powinien
+            wypisać too much” i czekać na podanie kolejnej liczby.
+            Jeśli użytkownik poda liczbę mniejszą, program powinien wypisać „not enough i analogicznie czekać na następną liczbę.
+            Jeśli podana wartość jest tą szukaną, to program powinien wypisać słowo BINGO i zakończyć się
+            Example:
+            Please insert digit:
+            5
+            Not enough
+            Please insert digit
+            15
+            Too much
+            Please insert digit 10
+            Bingo!
                     */
     public static void main(String[] args) {
         gameTooLowerOrTooUpper();
@@ -66,7 +66,7 @@ public class TaskEleventh {
                 System.out.println(command);
             }
 
-        } while (!command.equalsIgnoreCase("Bingo"));
+        } while (!command.equalsIgnoreCase(BINGO));
 
     }
 }
