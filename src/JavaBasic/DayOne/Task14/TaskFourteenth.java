@@ -22,10 +22,10 @@ a następny krok to obliczenie kwoty raty na podstawie ilości rat
     */
 public class TaskFourteenth {
     private static final double LOW_INTEREST_RATE = 1.025;
-    private static final double HiGH_INTEREST_RATE = 1.1;
+    private static final double HIGH_INTEREST_RATE = 1.1;
     private static final double AVERAGE_INTEREST_RATE = 1.05;
     private static final Scanner INPUT = new Scanner(System.in);
-  
+
 
 
     public static void main(String[] args) {
@@ -66,7 +66,7 @@ public class TaskFourteenth {
         double cash = loanAmount();
        int numberOfInstallemts = calculateNumberOfInstallments();
         if(numberOfInstallemts>=25){
-            return Math.round(100*cash* HiGH_INTEREST_RATE /numberOfInstallemts)/100d;
+            return Math.round(100*cash* HIGH_INTEREST_RATE /numberOfInstallemts)/100d;
         }
         if(numberOfInstallemts>=13){
             return Math.round(100*cash* AVERAGE_INTEREST_RATE /numberOfInstallemts)/100d;
