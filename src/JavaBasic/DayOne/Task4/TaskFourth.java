@@ -16,14 +16,11 @@ import java.util.Scanner;
     */
 
 public class TaskFourth {
-    // określenie finalnymi polami zakresu prawidłowej wagi w skali BMI
+    // determining the range of the correct weight in the BMI scale with the final fields
     private static final double BMI_MIN_RANGE = 18.5;
     private static final double BMI_MAX_RANGE = 24.9;
-    // przypisanie do pola finalnego Scannera
     private static final Scanner INPUT = new Scanner(System.in);
 
-
-    // static -> będzie to obiekt wspólny dla wszystkich wywołań
 
     public static void main(String[] args) {
         int height = getHeightFromUser();
@@ -32,7 +29,7 @@ public class TaskFourth {
         displayBmiResult(bmi);
     }
 
-    // metody pobierające wagę i wzrost od użytkownika
+    // methods inserting weight and height of user
     private static float getWeightFromUser() {
         System.out.println("Please insert weight in kg: ");
         return INPUT.nextFloat();
@@ -52,7 +49,7 @@ public class TaskFourth {
     }
 
     private static void displayBmiResult(final float bmi) {
-        // wprowadzenie pól finalnych czytelnych do odbioru (nie nic niemówiące wartości)
+        //introducing final fields for better code reading
         if (bmi < BMI_MIN_RANGE || bmi > BMI_MAX_RANGE) {
             System.out.println("BMI is incorrect " + bmi);
         } else {

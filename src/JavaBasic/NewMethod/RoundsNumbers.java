@@ -1,6 +1,6 @@
 package JavaBasic.NewMethod;
 
-public class RoundNumbers {
+public class RoundsNumbers {
     public static double hundredths(double number){
 
         return (double) (Math.round(100 * number) / 100d);

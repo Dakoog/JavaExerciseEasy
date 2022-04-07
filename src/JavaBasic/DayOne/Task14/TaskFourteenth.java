@@ -1,6 +1,7 @@
 package JavaBasic.DayOne.Task14;
 
-import JavaBasic.NewMethod.RoundNumbers;
+
+import JavaBasic.NewMethod.RoundsNumbers;
 
 import java.util.Scanner;
 
@@ -24,16 +25,16 @@ a następny krok to obliczenie kwoty raty na podstawie ilości rat
     */
 public class TaskFourteenth {
     private static final double LOW_INTEREST_RATE = 1.025;
-    private static final double HiGH_INTEREST_RATE = 1.1;
+    private static final double HIGH_INTEREST_RATE = 1.1;
     private static final double AVERAGE_INTEREST_RATE = 1.05;
     private static final Scanner INPUT = new Scanner(System.in);
-    private double cash;
-    private int installments;
+
+
 
 
     public static void main(String[] args) {
 
-        System.out.println("the amount of your monthly loan installment is " + amountOfMonthlyLoanInstallment() + " PLN.");
+        System.out.println("The amount of your monthly loan installment is " + amountOfMonthlyLoanInstallment() + " PLN.");
     }
 
     private static int getNumberOfInstallments() {
@@ -75,16 +76,16 @@ public class TaskFourteenth {
 
         int numberOfInstallments = calculateNumberOfInstallments();
         if (numberOfInstallments >= 25) {
-            monthlyInstallment = cash * HiGH_INTEREST_RATE / numberOfInstallments;
-            return RoundNumbers.hundredths(monthlyInstallment);
+            monthlyInstallment = cash * HIGH_INTEREST_RATE / numberOfInstallments;
+            return RoundsNumbers.hundredths(monthlyInstallment);
         }
         if (numberOfInstallments >= 13) {
             monthlyInstallment = cash * AVERAGE_INTEREST_RATE / numberOfInstallments;
-            return RoundNumbers.hundredths(monthlyInstallment);
+            return RoundsNumbers.hundredths(monthlyInstallment);
         }
         if (numberOfInstallments >= 6) {
             monthlyInstallment = cash * LOW_INTEREST_RATE / numberOfInstallments;
-            return RoundNumbers.hundredths(monthlyInstallment);
+            return RoundsNumbers.hundredths(monthlyInstallment);
         }
         return cash;
 
