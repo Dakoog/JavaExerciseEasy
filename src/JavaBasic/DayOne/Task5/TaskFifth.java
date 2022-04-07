@@ -16,43 +16,34 @@ public class TaskFifth {
 
     public static void main(String[] args) {
         System.out.println("Please insert first number: ");
-        INPUT.nextInt();
+        int firstNumber = INPUT.nextInt();
         System.out.println("Please insert second number: ");
-        INPUT.nextInt();
+        int secondNumber = INPUT.nextInt();
        // alternative methods
-        int sum = sumOfTheSequenceWithForI();
+        int sum = sumOfTheSequenceWithForI(firstNumber, secondNumber);
         System.out.println(sum);
 
-        int sum2 = sumOfTheSequenceWithWhile();
+        int sum2 = sumOfTheSequenceWithWhile(firstNumber,secondNumber);
         System.out.println(sum2);
 
-        int sum3 = sumOfTheSequenceWithDoWhile();
+        int sum3 = sumOfTheSequenceWithDoWhile(firstNumber, secondNumber);
         System.out.println(sum3);
 
     }
 
-    private static int getFirstNumber() {
 
 
-    }
-
-    private static int getSecondNumber() {
+    private static int sumOfTheSequenceWithForI(int firstNumber, int secondNumber) {
 
 
-    }
 
-    private static int sumOfTheSequenceWithForI() {
-
-        int firstDigit = getFirstNumber();
-        int secondDigit = getSecondNumber();
-
-        if (firstDigit > secondDigit) {
-            int tmp = firstDigit;
-            firstDigit = secondDigit;
-            secondDigit = tmp;
+        if (firstNumber > secondNumber) {
+            int tmp = firstNumber;
+            firstNumber = secondNumber;
+            secondNumber = tmp;
         }
         int sum = 0;
-        for (int i = firstDigit; i <= secondDigit; i++) {
+        for (int i = firstNumber; i <= secondNumber; i++) {
             sum += i;
         }
 

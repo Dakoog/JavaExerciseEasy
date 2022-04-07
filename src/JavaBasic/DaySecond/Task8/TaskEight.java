@@ -31,6 +31,7 @@ public class TaskEight {
                 } else {
                     //result += currentChar;
                     resultSb.append(currentChar);
+
                 }
             }
             //return result;
