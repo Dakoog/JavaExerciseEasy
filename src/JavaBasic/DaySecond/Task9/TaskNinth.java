@@ -19,8 +19,8 @@ import java.util.Scanner;
 */
 public class TaskNinth {
     public static void main(String[] args) {
-        System.out.println(longestWord());
-
+        System.out.println("The longest word in the text is: "+longestWord());
+      
     }
 
     private static String longestWord() {
@@ -40,13 +40,15 @@ public class TaskNinth {
             }
 
 
-            if (resultMax.length() < result.length() && !result.equals("Enough")) {
+            if (resultMax.length() < result.length()
+                    &&
+                    !result.equals("Enough")) {
                 resultMax = result;
             }
 
         } while (!result.equals("Enough"));
         System.out.println("All the text it: "+text);
-        System.out.print("The longest word in the text is: ");
+
         return resultMax;
     }
 }
