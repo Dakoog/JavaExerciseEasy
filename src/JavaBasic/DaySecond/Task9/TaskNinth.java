@@ -28,7 +28,8 @@ public class TaskNinth {
 
         String result = "";
         String resultMax = "";
-        String text = "";
+        // StringBuilder class which includes a lot of method for words
+        StringBuilder text = new StringBuilder();
         // Created loop "doWhile" for insert nexted words of all text
         do {
 
@@ -37,8 +38,9 @@ public class TaskNinth {
             if (result.equals("")) {
                 System.out.println("No input");
             }
+            // convert String to StringBuilder and use append words method
             if (!result.equals("Enough")) {
-                text += result + " ";
+                text.append(result).append(" ");
             }
 
 
