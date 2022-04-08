@@ -19,35 +19,38 @@ import java.util.Scanner;
 */
 public class TaskNinth {
     public static void main(String[] args) {
-        System.out.println("The longest word in the text is: "+longestWord());
-      
+        System.out.println("The longest word in the text is: " + longestWord());
+
     }
 
     private static String longestWord() {
         Scanner input = new Scanner(System.in);
-        String resultMax = "";
+
         String result = "";
+        String resultMax = "";
         String text = "";
+        // Created loop "doWhile" for insert nexted words of all text
         do {
 
             System.out.println("Please insert your text: ");
             result = input.nextLine();
-            if(result.equals("")){
+            if (result.equals("")) {
                 System.out.println("No input");
             }
-            if(!result.equals("Enough")){
+            if (!result.equals("Enough")) {
                 text += result + " ";
             }
 
 
-            if (resultMax.length() < result.length()
-                    &&
-                    !result.equals("Enough")) {
-                resultMax = result;
+            if (resultMax.length() < result.length()) {
+
+                if (!result.equals("Enough")) {
+                    resultMax = result;
+                }
             }
 
         } while (!result.equals("Enough"));
-        System.out.println("All the text it: "+text);
+        System.out.println("All the text it: " + text);
 
         return resultMax;
     }
