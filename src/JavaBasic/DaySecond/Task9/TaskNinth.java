@@ -27,6 +27,7 @@ public class TaskNinth {
         Scanner input = new Scanner(System.in);
         String resultMax = "";
         String result = "";
+        String text = "";
         do {
 
             System.out.println("Please insert your text: ");
@@ -34,13 +35,18 @@ public class TaskNinth {
             if(result.equals("")){
                 System.out.println("No input");
             }
+            if(!result.equals("Enough")){
+                text += result + " ";
+            }
+
 
             if (resultMax.length() < result.length() && !result.equals("Enough")) {
                 resultMax = result;
             }
 
         } while (!result.equals("Enough"));
-
+        System.out.println("All the text it: "+text);
+        System.out.print("The longest word in the text is: ");
         return resultMax;
     }
 }
