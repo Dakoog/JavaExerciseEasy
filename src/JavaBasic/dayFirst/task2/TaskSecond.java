@@ -1,4 +1,4 @@
-package JavaBasic.dayFirst.Task2;
+package JavaBasic.dayFirst.task2;
 
 import java.util.Scanner;
 

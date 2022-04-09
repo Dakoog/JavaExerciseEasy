@@ -1,4 +1,4 @@
-package JavaBasic.dayFirst.Task1;
+package JavaBasic.dayFirst.task1;
 
 public class TaskFirst {
     /*

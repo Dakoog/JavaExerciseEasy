@@ -2,7 +2,12 @@ package JavaBasic.dayThird.Task1;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/*
+Napisz program, który sprawdzi czy podany adres email ma poprawny format
+Przykład
+If email address aaa@com pl has correct format true
+If email address aaa has correct format false
+*/
 public class TaskFirst {
     //private static final String EMAIL_VALIDATOR = "[A-Za-z0-9._-]+@[a-z]+(\\.[a-z]+)?";
     private static final String EMAIL_VALIDATOR = "[\\w\\d._-]+@[\\w]+(\\.[\\w]+)?";
