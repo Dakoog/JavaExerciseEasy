@@ -27,7 +27,7 @@ Napiszprogram, który sprawdzi czy podany polski numer IBAN ma poprawny format
 */
 public class TaskSecond {
 
-    private static final String PL_IBAN= "(PL)+[0-9]{26}";
+    private static final String PL_IBAN= "PL[0-9]{26}";
 
     public static void main(String[] args) {
         System.out.println("PL29921876098215675502317409 :"+ isCorectFormat("PL29921876098215675502317409"));
