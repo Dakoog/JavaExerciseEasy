@@ -10,33 +10,37 @@ import java.util.regex.Pattern;
 */
 public class TaskThird {
 
-    private static final String DOUBLE_NUMBER = "-?[1-9]*0?,[0-9]+";
+    private static final String DOUBLE_NUMBER = "-?[1-9]*0?(,[0-9]+)?";
 
     public static void main(String[] args) {
+        
         System.out.println("IS THIS DOUBLE NUMBER?");
-        String doubleNumber ="1234,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="-1234,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="0,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="10,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
+        String doubleNumber = "1234,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "-1234,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "0,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "10,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "-10";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
         System.out.println("------------------------");
-        doubleNumber ="0!1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="01,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="000,1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
-        doubleNumber ="1234a1234";
-        System.out.println(doubleNumber+" is correct: "+isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "0!1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "01,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "000,1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
+        doubleNumber = "1234a1234";
+        System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
         System.out.println();
 
 
     }
-    private static boolean isCorrectFormatForDouble(String doubleNumber){
-        Pattern pattern= Pattern.compile(DOUBLE_NUMBER);
+
+    private static boolean isCorrectFormatForDouble(String doubleNumber) {
+        Pattern pattern = Pattern.compile(DOUBLE_NUMBER);
         return pattern.matcher(doubleNumber).matches();
     }
 }
