@@ -18,7 +18,7 @@ import java.util.Scanner;
 **/
 public class TaskFifth {
     public static void main(String[] args) {
-     stoper();
+        stoper();
     }
 
     private static void stoper() {
@@ -30,9 +30,17 @@ public class TaskFifth {
         input.nextLine();
         LocalTime stop = LocalTime.now();
         Duration stoper = Duration.between(start, stop);
+        if (stoper.getSeconds() < 60) {
+            System.out.printf("Seconds: %02d " + stoper.getSeconds());
+        } else {
+            long minut = stoper.getSeconds() / 60;
+            long second = stoper.getSeconds() % 60;
+            System.out.printf(" Minutes: %02d Seconds: %02d" +  minut,second);
+        }
+        ;
 
-        System.out.println("Total time "+ stoper.getSeconds()+" sec");
 
     }
 }
+
 
