@@ -13,7 +13,7 @@ public class TaskThird {
     private static final String DOUBLE_NUMBER = "-?[1-9]*0?(,[0-9]+)?";
 
     public static void main(String[] args) {
-        
+
         System.out.println("IS THIS DOUBLE NUMBER?");
         String doubleNumber = "1234,1234";
         System.out.println(doubleNumber + " is correct: " + isCorrectFormatForDouble(doubleNumber));
