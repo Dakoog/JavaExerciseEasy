@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /*
-    Napisz program, który pobierze od użytkownika datę najbliższych Twoich zajęć w SDA i obliczy
-    ile dni do nich pozostało.
+    Napisz program, który pobierze od użytkownika datę jego urodzin i obliczy
+   czas (lata, dni, godziny
     Przykład:
     Please insert date [in format [
     yyyy MM dd HH:mm:ss ]]: 1900 0 1 01 09:00:00
@@ -27,17 +27,18 @@ public class TaskSixth {
         System.out.println("Please insert date your next SDA meeting in format yyyy-MM-dd HH:mm:ss");
         String meetingDate = input.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime nextLessons = LocalDateTime.parse(meetingDate, formatter);
+        LocalDateTime nextLessons = LocalDateTime.parse(meetingDate,formatter);
 
         LocalDateTime now = LocalDateTime.now();
 
         Duration duration = Duration.between(now, nextLessons);
-        long days = duration.toDaysPart();
-        int hours = duration.toHoursPart();
-        int minutes = duration.toMinutesPart();
-        int secs = duration.toSecondsPart();
+        int year = (int)(duration.toDaysPart()/-365.24);
+        int days = -(int)(duration.toDaysPart() +year*365.24);
+        long hours = -duration.toHoursPart();
+        int minutes = -duration.toMinutesPart();
+        int secs = -duration.toSecondsPart();
         System.out.println("You have Days: " + days + " Hours: " + hours + " Minutes: " + minutes + " Seconds: " + secs);
-        System.out.printf("You have Days: %02d Hours: %02d Minutes: %02d Seconds: %02d", days, hours, minutes, secs);
+        System.out.printf("You have : %02d Days: %02d Hours: %02d Minutes: %02d Seconds: %02d",year, days, hours, minutes, secs);
         System.out.printf("\n%02d:%02d:%02d:%02d", days, hours, minutes, secs);
 
     }
