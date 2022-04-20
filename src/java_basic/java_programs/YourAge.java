@@ -4,9 +4,7 @@ package java_basic.java_programs;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 import java.util.Scanner;
-import java.util.spi.CalendarDataProvider;
 
 /*
     Napisz program, który pobierze od użytkownika datę jego urodzin i obliczy
@@ -23,15 +21,15 @@ import java.util.spi.CalendarDataProvider;
 */
 public class YourAge {
     public static void main(String[] args) {
-        numberOfDaysToMeeting();
+        numberOfDaysYourBirthday();
     }
 
-    private static void numberOfDaysToMeeting() {
+    private static void numberOfDaysYourBirthday() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please insert date your birth  in format yyyy-MM-dd HH:mm");
-        String meetingDate = input.nextLine();
+        String birthDate = input.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime nextLessons = LocalDateTime.parse(meetingDate, formatter);
+        LocalDateTime nextLessons = LocalDateTime.parse(birthDate, formatter);
 
         LocalDateTime now = LocalDateTime.now();
 
